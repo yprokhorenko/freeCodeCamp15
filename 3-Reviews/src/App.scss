@@ -1,0 +1,97 @@
+$btn-color: #98c1d9;
+$review-font: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans';
+
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 90vh;
+}
+
+.review {
+  width: 600px;
+  background-color: rgb(58, 58, 58);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+
+  .name {
+    font-family: $review-font;
+    font-size: large;
+  }
+
+  .job {
+    font-family: $review-font;
+    font-size: 13px;
+  }
+
+  .info {
+    font-family: $review-font;
+    font-style: italic;
+    margin: 7px 0;
+  }
+
+  .tg-icon {
+    font-size: 25px;
+    color: rgb(34, 124, 207);
+    cursor: pointer;
+  }
+
+  .surprise-btn {
+    color: $btn-color;
+    background-color: rgb(90, 90, 90);
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    padding: 3px 20px;
+    transition: 0.3s;
+
+    &:active {
+      cursor: pointer;
+      transition: 0.3s;
+      background-color: rgb(34, 124, 207);
+    }
+  }
+}
+
+.img-container {
+  .person-img {
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.btn-container {
+
+  .prev-btn,
+  .next-btn {
+    color: $btn-color;
+    transition: 0.5s;
+    padding: 0 7px;
+    font-size: 20px;
+    background-color: transparent;
+    border-style: none;
+
+    &:hover,
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:active,
+    &:active {
+      cursor: pointer;
+      transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 1);
+      color: rgb(34, 124, 207);
+    }
+  }
+}
