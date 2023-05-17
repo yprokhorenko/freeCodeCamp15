@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+.birthdayContainer {
+  width: 350px;
+  background-color: #424242;
+  color: #fff;
+  padding: 30px 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2),
+    0 3px 10px 0 rgba(0, 0, 0, 0.19);
+
+}
+
+.usersList {
+  margin: 5px 0 15px 0;
+}
+
+.birthdayBtn {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 7px 15px;
+  width: 90%;
+  margin: 0 auto;
+  display: block;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.birthdayBtn:hover {
+  background-color: #fff;
+  color: #000;
+  cursor: pointer;
+}
+
+.section,
+h3 {
+  margin: 0;
+}
