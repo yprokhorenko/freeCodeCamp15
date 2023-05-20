@@ -1,3 +1,5 @@
+$orange: #F59E0B;
+
 * {
   box-sizing: border-box;
 }
@@ -24,6 +26,16 @@
   .single-item {
     flex-basis: calc(33.333% - 2rem);
     margin: 15px;
+    transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    &:hover {
+      cursor: pointer;
+      box-shadow: 0px -2px 15px -3px rgba(0, 255, 21, 0.288);
+      transform: scale(1.03);
+      transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+
+    }
+
 
     .item-image {
       height: 200px;
@@ -32,6 +44,7 @@
       border-radius: 7px 7px 0 0;
       vertical-align: top;
       box-shadow: 0px -2px 15px -3px rgba(0, 0, 0, 0.3);
+
     }
 
     .title-block {
@@ -49,7 +62,7 @@
         font-weight: bold;
         padding: 7px 0;
         white-space: nowrap;
-        background-color: #ffc918;
+        background-color: $orange;
         color: rgb(255, 255, 255);
         padding: 2px 6px;
         border-radius: 5px;
@@ -73,9 +86,31 @@
   }
 }
 
+.btn-container {
+  .filter-btn {
+    background-color: $orange;
+    margin: 5px 10px;
+    padding: 4px 9px;
+    cursor: pointer;
+    border-radius: 3px;
+    border: none;
+    transition: 0.1s;
+
+    &:hover {
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    &:active {
+      transition: 0.1s;
+      transform: translateY(2px);
+    }
+  }
+}
+
 @media screen and (max-width: 800px) {
   .item-container {
-    justify-content: start;
+    // justify-content: start;
+
     .single-item {
       flex-basis: calc(50% - 2rem);
     }
@@ -86,6 +121,7 @@
   .item-container {
     .single-item {
       flex-basis: calc(100% - 2rem);
+
       .item-image {
         height: 150px;
       }
