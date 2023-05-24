@@ -1,0 +1,136 @@
+$main-color: rgb(0, 79, 157);
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+li {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
+  list-style: none;
+}
+
+#root {
+  margin: 0 auto;
+  text-align: center;
+  background-color: white;
+}
+
+nav {
+  margin: 0 auto;
+  max-width: 1180px;
+
+  .nav-container {
+
+    .nav-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.5rem;
+      margin: 0 1.5rem;
+      height: 60px;
+
+      .header-img {
+        cursor: pointer;
+        width: 120px;
+      }
+
+      .nav-toggle {
+        padding-top: 7px;
+        background: transparent;
+        border-color: transparent;
+        font-size: 1.5rem;
+        color: $main-color;
+        cursor: pointer;
+        transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        &:hover {
+          translate: transform(-90deg);
+        }
+      }
+    }
+
+        .links-container {
+          transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    
+          .links {
+            a {
+              font-size: 1rem;
+              display: block;
+              padding: 0.5rem 1rem;
+              transition: 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    
+              &:hover {
+                color: white;
+                background-color: $main-color;
+              }
+            }
+          }
+        }
+  }
+
+  .socials-container {
+    display: none;
+  }
+}
+
+// .show-container {
+//   height: 10rem;
+// }
+
+@media screen and (min-width: 720px) {
+
+  .nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1180px;
+    margin-right: 1.5rem;
+
+    .nav-toggle {
+      display: none;
+
+    }
+
+    .links-container {
+      height: auto !important;
+
+      .links {
+        display: flex;
+
+        .single-link {
+          a {
+            padding: 0;
+            margin: 0 1rem;
+            &:hover {
+              color: $main-color;
+              background-color: initial;
+              border-bottom: 1px solid $main-color;
+            }
+          }
+        }
+      }
+    }
+
+    .socials-container {
+      display: flex;
+
+      .social-icon {
+        margin-left: 0.5rem;
+        color: rgb(0, 79, 157);
+
+        a {
+          font-size: 1.1rem;
+        }
+      }
+    }
+  }
+}
