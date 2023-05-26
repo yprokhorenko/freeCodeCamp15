@@ -25,6 +25,7 @@ export const links = [
     url: "#",
     text: "Profile",
   },
+  
 ];
 
 export const socials = [
