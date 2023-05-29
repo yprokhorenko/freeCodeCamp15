@@ -1,0 +1,143 @@
+$main-color: rgb(0, 79, 157);
+$transition: all 0.3s linear;
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a,
+li {
+  border: none;
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+  color: inherit;
+  background-color: transparent;
+  text-decoration: none;
+  list-style: none;
+}
+
+//Modal
+
+.modal-overlay {
+  display: none;
+
+  .modal {
+    color: black;
+    position: relative;
+    height: 250px;
+    width: 450px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+
+    .modal-close-btn {
+      position: absolute;
+      top: 0;
+      right: 0;
+      font-size: 30px;
+      padding: 5px;
+      color: rgb(133, 40, 40);
+      background-color: transparent;
+      border-color: none;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.5s ease;
+
+      &:hover {
+        color: red;
+        transform: scale(1.2);
+        transition: transform 0.5s ease;
+      }
+    }
+
+    .modal-content {
+      color: black;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.show-modal {
+  display: block;
+}
+
+//Sidebar
+
+.sidebar-overlay {
+  height: 100%;
+  width: 350px;
+  display: none;
+  position: absolute;
+  left: 0;
+  padding: 20px;
+  background-color: #fff;
+
+  .sidebar-header {
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .header-image {
+      cursor: pointer;
+      width: 120px;
+    }
+
+    .sidebar-closing-btn {
+      font-size: 30px;
+      color: rgb(0, 0, 0);
+      background-color: transparent;
+      cursor: pointer;
+      border: none;
+      transition: transform 0.5s ease;
+
+      &:hover {
+        color: rgb(104, 0, 0);
+        transform: scale(1.2);
+        transition: transform 0.5s ease;
+      }
+    }
+  }
+
+  .sidebar-nav {
+    background-color: green;
+    margin: 30px 0;
+
+    .nav-single-link {
+      padding: 20px;
+      text-align: left;
+
+      a {
+        font-size: 20px;
+
+        svg {
+          margin-right: 10px;
+          font-size: 24px;
+          vertical-align: sub;
+        }
+      }
+    }
+  }
+
+  .sidebar-socials {
+    background-color: red;
+    margin: 20px 0;
+
+    .single-social {}
+  }
+}
+
+.show-sidebar {
+  display: block;
+}
