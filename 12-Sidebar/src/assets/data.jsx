@@ -39,6 +39,7 @@ export const links = [
     text: "Profile",
     icon: <RiParentLine />,
   },
+  
 ];
 
 export const socials = [
@@ -62,4 +63,5 @@ export const socials = [
     url: "#",
     icon: <FaTwitter />,
   },
+  
 ];

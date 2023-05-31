@@ -1,14 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { MdMenu } from "react-icons/md";
+import { AppContext } from "../context";
 
 const Home = () => {
+  const { openSidebar, openModal } = useContext(AppContext);
   return (
-    <div>
-      <button className="modal-btn">
-        <MdMenu />
-      </button>
-      <button className="sidebar-btn">Show Modal</button>
-    </div>
+    <main>
+      <button onClick={openSidebar} className="sidebar-toggle" > <MdMenu /> </button>
+      <button onClick={openModal}   className="btn" > Show Modal </button>
+    </main>
   );
 };
 
